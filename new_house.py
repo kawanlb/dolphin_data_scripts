@@ -33,5 +33,5 @@ def copy_all_columns_to_new_sheet(file_path, new_sheet_name):
 
 # Exemplo de uso
 file_path = './nomes.xlsx'  # Substitua pelo caminho do seu arquivo Excel
-new_sheet_name = 'teste2'
+new_sheet_name = 'CUPIDO'
 copy_all_columns_to_new_sheet(file_path, new_sheet_name)
