@@ -75,8 +75,6 @@ def create_multiple_profiles(session: requests.Session, num_profiles: int):
         proxy_name = sheet.cell(row=2, column=1).value
         proxy_login = proxy_parts[2]
         proxy_password = proxy_parts[3]
-        facebook_login = sheet.cell(row=2, column=3).value
-        facebook_password = sheet.cell(row=2, column=4).value
 
         proxy_host = proxy_parts[0]
         proxy_port = proxy_parts[1]
@@ -130,17 +128,10 @@ def create_multiple_profiles(session: requests.Session, num_profiles: int):
                 "tags": [
                     ""
                 ],
-                "mainWebsite": "facebook",
                 "notes": {
-                    "username": facebook_login,
-                    "password": facebook_password,
-                    "content": None,
-                    "color": "blue",
-                    "style": "text",
-                    "icon": None
                 },
                 "proxy": {
-                    "name": f"http://{proxy_name}",
+                    "name": proxy_name,
                     "host": proxy_host,
                     "port": proxy_port,
                     "type": "http",

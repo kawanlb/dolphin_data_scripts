@@ -56,7 +56,7 @@ class DolphinAutomator:
             time.sleep(5)  # Esperar a ação de registro concluir
 
             driver.quit()
-            dolphin.close_profile(profile_id)
+            # Removido: dolphin.close_profile(profile_id)
             print(f"Automatizou o perfil {profile_name} com sucesso!")
         except Exception as e:
             print(f"Falha ao automatizar o perfil {profile_name}: {str(e)}")
